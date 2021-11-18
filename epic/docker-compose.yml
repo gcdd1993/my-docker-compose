@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  epic-a:
+      image: luminoleon/epicgames-claimer
+      container_name: epic-a
+      restart: unless-stopped
+      volumes:
+        - ./data:/User_Data
+      environment:
+        - TZ=Asia/Shanghai
+        - AUTO_UPDATE=true
+        - EMAIL=mobile17602526128@gmail.com
+        - PASSWORD=KV*yK7eo%E*5vTER
+        - VERIFICATION_CODE=

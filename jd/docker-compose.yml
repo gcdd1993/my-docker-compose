@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  pyjs:
+    image: classmatelin/pyjs
+    container_name: pyjs
+    restart: unless-stopped
+    tty: true
+    volumes:
+      - ./config.yaml:/scripts/conf/config.yaml

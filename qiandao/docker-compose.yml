@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  qiandao:
+    image: a76yyyy/qiandao:20211102
+    container_name: qiandao
+    restart: unless-stopped
+    ports:
+      - 12345:80
+    volumes:
+      - ./data:/usr/src/app/config
+    tty: true

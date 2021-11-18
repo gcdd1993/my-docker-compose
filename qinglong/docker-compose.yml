@@ -1,0 +1,22 @@
+version: "3"
+services:
+  qinglong:
+    image: whyour/qinglong:latest
+    container_name: qinglong
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "30192:5700"
+    environment:
+      - ENABLE_HANGUP=true
+      - ENABLE_WEB_PANEL=true
+    volumes:
+      - ./config:/ql/config
+      - ./db:/ql/db
+      - ./scripts:/ql/scripts
+      - ./log:/ql/log
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 800M

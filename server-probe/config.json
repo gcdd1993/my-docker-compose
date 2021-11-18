@@ -1,0 +1,85 @@
+{
+  "servers": [
+    {
+      "name": "Rancher主节点",
+      "type": "阿里云ECS",
+      "host": "10.0.0.99",
+      "location": "张家口",
+      "username": "rancher-master",
+      "password": "AD36L63D7xZcA2K2",
+      "monthstart": 1
+    },
+    {
+      "name": "空压在线生产-1",
+      "type": "阿里云ECS",
+      "host": "10.0.0.101",
+      "location": "张家口",
+      "username": "ack-worker-001",
+      "password": "AD36L63D7xZcA2K2",
+      "monthstart": 1
+    },
+    {
+      "name": "空压在线生产-2",
+      "type": "阿里云ECS",
+      "host": "10.0.0.97",
+      "location": "张家口",
+      "username": "ack-worker-002",
+      "password": "AD36L63D7xZcA2K2",
+      "monthstart": 1
+    },
+    {
+      "name": "空压在线生产-3",
+      "type": "阿里云ECS",
+      "host": "10.0.0.113",
+      "location": "张家口",
+      "username": "ack-worker-003",
+      "password": "AD36L63D7xZcA2K2",
+      "monthstart": 1
+    },
+    {
+      "name": "空压在线生产-4",
+      "type": "阿里云ECS",
+      "host": "10.0.0.98",
+      "location": "张家口",
+      "username": "ack-worker-007",
+      "password": "AD36L63D7xZcA2K2",
+      "monthstart": 1
+    },
+    {
+      "name": "空压在线生产-5",
+      "type": "阿里云ECS",
+      "host": "10.0.0.115",
+      "location": "张家口",
+      "username": "ack-worker-008",
+      "password": "AD36L63D7xZcA2K2",
+      "monthstart": 1
+    },
+    {
+      "name": "Kafka-1",
+      "type": "阿里云ECS",
+      "host": "10.0.0.102",
+      "location": "张家口",
+      "username": "ack-worker-004",
+      "password": "AD36L63D7xZcA2K2",
+      "monthstart": 1
+    },
+    {
+      "name": "Kafka-2",
+      "type": "阿里云ECS",
+      "host": "10.0.0.100",
+      "location": "张家口",
+      "username": "ack-worker-005",
+      "password": "AD36L63D7xZcA2K2",
+      "monthstart": 1
+    },
+    {
+      "name": "Kafka-3",
+      "type": "阿里云ECS",
+      "host": "10.0.0.104",
+      "location": "张家口",
+      "username": "ack-worker-006",
+      "password": "AD36L63D7xZcA2K2",
+      "monthstart": 1
+    }
+  ]
+}

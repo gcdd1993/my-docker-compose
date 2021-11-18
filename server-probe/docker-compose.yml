@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  serverstatus:
+    container_name: serverstatus
+    image: cppla/serverstatus:latest
+    volumes:
+      - ./config.json:/ServerStatus/server/config.json
+    ports:
+      - "28444:80"
+      - "35601:35601"
+    restart: unless-stopped

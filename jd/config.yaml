@@ -1,0 +1,67 @@
+﻿# 脚本配置文件 
+
+
+# chromium路径, 默认不需要修改，除非你是本地运行或者进行开发。
+chrome_path: /usr/bin/chromium
+
+# 在此列表中的脚本, 将不会加入到定时任务中, 如需立即生效, 请手动执行命令: docker-entrypoint
+crontab_exclude_scripts:
+- jd_bean_indiana.py
+
+# 控制台输出: true/false
+debug: true
+
+# 京东cookies, 包含pt_key=xx;pt_pin=xx;即可, 中间不能有空格, 分号不能少。如需给cookie添加备注, 可在其后面添加: `remark=账号1;`, 例如:`pt_pin=jd_78b;pt_key=AAJgyqEMOxU;remark=账号1;`
+jd_cookies:
+- pt_key=app_openAAJhcTopADAhqBHRLBEKqwidY4iflMZ4paorwZe_ayHyZVclhtXkoOkm50Xfc4qNnTD-gcvnQFc;pt_pin=jd_426f58510cab6;
+
+# 东东农场是否使用水滴换豆卡, 100水滴可以换20京豆, 默认不兑换
+jd_farm_bean_card: false
+
+# 东东农场每天保留多少水滴, 用于明天的十次浇水任务
+jd_farm_retain_water: 80
+
+# 拼图签到默认进程数量
+jd_puzzle_process_num: 1
+
+# 京东超市蓝币兑换物品,选项: 20, 1000, 或者其它商品唯一关键字, 默认20
+jd_supermarket_exchange: 20
+
+# 宠汪汪兑换京豆数, 选项, 20, 500, 默认20
+joy_exchange_num: 20
+
+# 宠汪汪喂食狗粮克数
+joy_feed_count: 20
+
+# 宠汪汪脚本开启进程数
+joy_process_num: 1
+
+# 日志保留天数, 默认3天
+log_days: 3
+
+# 消息通知配置项, TG机器人通知需要宿主机有qiang。
+notify:
+
+  # Push+一对多通知组编号, 一对一不需要填
+  push_plus_group: null
+
+  # Push+消息通知Token, https://pushplus.hxtrip.com/
+  push_plus_token: null
+
+  # 企业微信通知, 依次填上corpid的值,corpsecret的值,touser的值,agentid,media_id的值，注意用英文,号隔开。
+  qywx_am: null
+
+  # server酱通知key
+  server_send_key: null
+
+  # TG代理
+  tg_bot_api: null
+
+  # TG机器人TOKEN
+  tg_bot_token: null
+
+  # TG机器人用户ID
+  tg_user_id: null
+
+# 脚本默认开启进程数量
+process_num: 4
