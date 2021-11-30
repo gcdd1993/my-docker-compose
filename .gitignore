@@ -76,3 +76,4 @@ qinglong/config/**
 qinglong/db/**
 runner/**
 v2p/elecv2p
+.idea
