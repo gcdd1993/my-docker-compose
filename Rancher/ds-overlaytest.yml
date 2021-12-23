@@ -1,0 +1,22 @@
+# 检查pod之间网络是否互通，https://docs.rancher.cn/docs/rancher2.5/troubleshooting/networking
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: overlaytest
+spec:
+  selector:
+    matchLabels:
+      name: overlaytest
+  template:
+    metadata:
+      labels:
+        name: overlaytest
+    spec:
+      tolerations:
+        - operator: Exists
+      containers:
+        - image: busybox:1.28
+          imagePullPolicy: Always
+          name: busybox
+          command: [ "sh", "-c", "tail -f /dev/null" ]
+          terminationMessagePath: /dev/termination-log

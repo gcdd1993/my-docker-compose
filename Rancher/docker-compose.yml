@@ -1,0 +1,12 @@
+version: '3'
+services:
+  rancher:
+    image: registry.cn-hangzhou.aliyuncs.com/rancher/rancher:v2.5.9
+    container_name: rancher
+    volumes:
+      - ./data:/var/lib/rancher
+    privileged: true
+    ports:
+      - 28080:80
+      - 28443:443
+    restart: unless-stopped

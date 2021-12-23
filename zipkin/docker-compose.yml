@@ -7,6 +7,7 @@ services:
     ports:
       - "9411:9411"
     restart: always
+    # https://github.com/openzipkin/zipkin/tree/master/zipkin-server#configuration
     environment:
       - STORAGE_TYPE=MySQL
       - MYSQL_HOST=192.168.2.19
