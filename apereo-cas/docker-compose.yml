@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  cas:
+    image: gcdd1993/cas:v6.5.0-SNAPSHOT
+    container_name: cas
+    ports:
+      - "8443:8443"
+    restart: always
+    volumes:
+      - "./data/services:/etc/cas/services"
