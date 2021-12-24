@@ -1,0 +1,12 @@
+version: '3.7'
+# https://github.com/helm/chartmuseum
+# https://hub.docker.com/r/bitnami/chartmuseum
+services:
+  chartmuseum:
+    image: bitnami/chartmuseum:latest
+    container_name: chartmuseum
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    volumes:
+      - "./data:/bitnami/data"
