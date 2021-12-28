@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  app:
+    image: mailhog/mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+    environment:
+      MH_STORAGE: maildir
+    volumes:
+      - "./data:/maildir"
