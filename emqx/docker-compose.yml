@@ -2,15 +2,12 @@ version: '3.7'
 
 services:
   app:
-    image: emqx/emqx
+    image: emqx/emqx:4.2.14 # 4.3.x 加载插件配置有问题
     healthcheck:
       test: [ "CMD", "/opt/emqx/bin/emqx_ctl", "status" ]
       interval: 5s
       timeout: 25s
       retries: 5
-      # 挂载后文件权限不对，读取错误
-    #    volumes:
-    #      - "./conf/emqx_auth_http.conf:/opt/emqx/etc/plugins/emqx_auth_http.conf"
     ports:
       - "1883:1883"
       - "8081:8081"
@@ -18,3 +15,11 @@ services:
       - "8883:8883"
       - "8084:8084"
       - "18083:18083"
+    environment:
+      - "EMQX_LOADED_PLUGINS=emqx_recon,emqx_retainer,emqx_management,emqx_dashboard,emqx_auth_http"
+      - "EMQX_AUTH__HTTP__AUTH_REQ=https://fff6a0bd-e123-4fc8-9b00-2bc9c79a1b25.mock.pstmn.io/mqtt/auth"
+      - "EMQX_AUTH__HTTP__AUTH_REQ__CONTENT_TYPE=json"
+      - "EMQX_AUTH__HTTP__AUTH_REQ__METHOD=post"
+      - "EMQX_AUTH__HTTP__ACL_REQ=https://fff6a0bd-e123-4fc8-9b00-2bc9c79a1b25.mock.pstmn.io/mqtt/acl"
+      - "EMQX_AUTH__HTTP__ACL_REQ__METHOD=post"
+      - "EMQX_AUTH__HTTP__ACL_REQ__CONTENT_TYPE=json"
