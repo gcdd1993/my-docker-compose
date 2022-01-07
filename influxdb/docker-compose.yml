@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  influxdb:
+    image: bitnami/influxdb:latest
+    container_name: influxdb-server
+    ports:
+      - 8086:8086
+      - 8088:8088
+    environment:
+      - INFLUXDB_ADMIN_USER_TOKEN=FvSo2szLLZ88qJrk
+      - INFLUXDB_ADMIN_USER_PASSWORD=FvSo2szLLZ88qJrk
+      - INFLUXDB_USER=gcdd
+      - INFLUXDB_USER_PASSWORD=FvSo2szLLZ88qJrk
+      - INFLUXDB_DB=my_database
+    volumes:
+      - "./data:/bitnami/influxdb"

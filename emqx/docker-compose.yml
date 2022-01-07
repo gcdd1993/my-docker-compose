@@ -8,6 +8,9 @@ services:
       interval: 5s
       timeout: 25s
       retries: 5
+      # 挂载后文件权限不对，读取错误
+    #    volumes:
+    #      - "./conf/emqx_auth_http.conf:/opt/emqx/etc/plugins/emqx_auth_http.conf"
     ports:
       - "1883:1883"
       - "8081:8081"
@@ -15,4 +18,3 @@ services:
       - "8883:8883"
       - "8084:8084"
       - "18083:18083"
-
