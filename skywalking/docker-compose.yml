@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   elasticsearch:
-    image: kubesphere/elasticsearch-oss:6.8.22
+    image: elasticsearch:7.17.0
     container_name: elasticsearch
     ports:
       - "9200:9200"
