@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  watchtower:
+    image: containrrr/watchtower
+    environment:
+      - REPO_USER=
+      - REPO_PASS=
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command:
+      - "--cleanup"
+      - "registry.cn-shanghai.aliyuncs.com/frbbs/fine-digit-serve-web"
+      - "registry.cn-shanghai.aliyuncs.com/frbbs/fine-digit-serve-webui"
