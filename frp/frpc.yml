@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  frpc:
+    container_name: frpc
+    image: snowdreamtech/frpc
+    network_mode: host
+    volumes:
+      - ./frpc.ini:/etc/frp/frpc.ini
