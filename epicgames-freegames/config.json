@@ -1,0 +1,32 @@
+{
+  "searchStrategy": "promotion",
+  "runOnStartup": true,
+  "cronSchedule": "*/10 * * * *",
+  "logLevel": "info",
+  "hcaptchaAccessibilityUrl": "https://accounts.hcaptcha.com/verify_email/xxx",
+  "webPortalConfig": {
+    "baseUrl": "https://epic.exmaple.com"
+  },
+  "accounts": [
+    {
+      "email": "xxx@gmail.com",
+      "password": "xxx",
+      "totp": "xxx"
+    }
+  ],
+  "notifiers": [
+    {
+      "type": "email",
+      "smtpHost": "smtp.gmail.com",
+      "smtpPort": 587,
+      "emailSenderAddress": "hello@gmail.com",
+      "emailSenderName": "Epic Games Captchas",
+      "emailRecipientAddress": "hello@gmail.com",
+      "secure": false,
+      "auth": {
+        "user": "hello@gmail.com",
+        "pass": "abc123"
+      }
+    }
+  ]
+}

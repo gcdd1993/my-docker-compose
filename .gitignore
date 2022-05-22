@@ -79,3 +79,5 @@ v2p/elecv2p
 .idea
 unicom-task/config.json
 vagrant/.vagrant
+hertzbeat-env/dbdata/**
+hertzbeat/dbdata/**

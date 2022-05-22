@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  epicgames-freegames:
+    image: charlocharlie/epicgames-freegames:latest
+    container_name: epicgames
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./config.json:/usr/app/config/config.json
