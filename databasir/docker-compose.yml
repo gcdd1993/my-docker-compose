@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  databasir:
+    image: vrantt/databasir:latest
+    ports:
+      - "8080:8080"
+    environment:
+      DATABASIR_DB_URL: 192.168.2.141:3306
+      DATABASIR_DB_USRNAME: root
+      DATABASIR_DB_PASSWORD: 123456
+      DATABASIR_JWT_SECRET: 123123123
